@@ -3,27 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta
+    name="description"
+    content="This website enables you to generate your own password."/>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Password generator app</title>
+  <link rel="stylesheet" href="/starter-code/style.css">
+  <link rel="stylesheet" href="/starter-code/reset.css">
+  <script defer src="/starter-code/script.js"></script>
+  
+  <title>Password generator | la-pupeh</title>
 </head>
 <body>
-
-  Password Generator
-
-  P4$5W0rD!
-
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
-
+  <main>
+    <h1>Password Generator</h1>
+    <div class="password-container">
+      <div class="password-input">
+        <input type="text" id="password" placeholder="P4$5W0rD!" readonly>
+        <span class="copied hidden">COPIED</span>
+        <img src="/starter-code/assets/images/icon-copy.svg" alt="Copy icon" id="copy-icon" class="copy-icon">
+      </div>
+      <div class="password-details-container">
+        <div class="character-length">
+          <p>Character Length</p>
+          <span id="length-value">0</span>
+        </div>
+        <input type="range" id="slider" min="0" max="20" value="0">
+        <div class="checkboxes">
+          <label class="checkbox-container">
+            <input type="checkbox" id="uppercase">
+            <span class="checkmark"></span>
+            <span class="uppercase">Include Uppercase Letters</span>
+          </label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="lowercase" >
+            <span class="checkmark"></span>
+            <span class="lowercase">Include Lowercase Letters</span>
+          </label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="numbers">
+            <span class="checkmark"></span>
+            <span class="numbers">Include Numbers</span>
+          </label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="symbols">
+            <span class="checkmark"></span>
+            <span class="symbols">Include Symbols</span>
+          </label>
+      </div>
+      <div class="strength-container">
+        <p>STRENGTH</p>
+        <div class="strength-indicator">
+        <span id="strength-text"></span>
+        <div class="strength-bars">
+            <div class="bar" id="bar1"></div>
+            <div class="bar" id="bar2"></div>
+            <div class="bar" id="bar3"></div>
+            <div class="bar" id="bar4"></div>
+        </div>
+      </div>
+    </div>
+      <button id="generate-btn">
+        <span>GENERATE</span>
+        <svg class="arrow-icon" width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+          <path d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/>
+        </svg>
+      </button>
+    </div>
+  </main>
 </body>
 </html>
