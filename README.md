@@ -10,11 +10,7 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-### Screenshot
-
-![](./Screenshot.png)
-
-
+![](Screenshot.png)
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
@@ -27,4 +23,5 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Javascript
 
