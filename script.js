@@ -9,7 +9,7 @@ const copyText = document.querySelector('.copied');
 const strengthBars = document.querySelector('.strength-bars');
 const strengthText = document.getElementById('strength-text');
 const arrowIcon = document.querySelector('.arrow-icon');
-
+const errorText = document.querySelector('.error-text');
 
 function sliderLength() {
     const min = slider.min;
@@ -46,10 +46,24 @@ function generatePassword() {
     selectedOptions.forEach(option => {
         charSet += characters[option];
     });
+
+    if (!charSet) {
+        password = '';
+        errorText.innerText = 'Please select at least one character type.';   
+    }
+    if (charLength.textContent < 1) {
+        password = '';
+        errorText.innerText = 'Please select a length greater than 0.';   
+    }
+    else {
+        errorText.innerText = '';
+    
     for (let i = 0; i < charLength.textContent; i++) {
         password += charSet.charAt(Math.floor(Math.random() * charSet.length));
     }
-    generatedPassword.value = password;   
+    generatedPassword.value = password;  
+    checkPasswordStrength(generatedPassword.value, selectedOptions.length);
+} 
 }
 
 function checkPasswordStrength(password, charTypeCount) {
@@ -82,9 +96,9 @@ function checkPasswordStrength(password, charTypeCount) {
 
 // Generate password on button click
 generateBtn.addEventListener('click', function() {
+   
     generatePassword();
-    checkPasswordStrength(generatedPassword.value, selectedOptions.length);
-
+    
 });
 
 generateBtn.addEventListener('mouseover', function() {

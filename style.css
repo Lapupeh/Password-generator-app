@@ -178,7 +178,7 @@ input[type="range"]::-moz-range-thumb:hover {
     border: 2px solid var(--color-green-200);
 }
 .checkbox-container input:checked + .checkmark {
-    background: url('assets/images/icon-check.svg') no-repeat center center var(--color-green-200);
+    background: url('/images/icon-check.svg') no-repeat center center var(--color-green-200);
     border: none;
 }
 .strength-container {
@@ -247,4 +247,9 @@ button:hover {
 .active-arrow {
    fill: var(--color-green-200);
 }
-
+.error-text {
+    color: var(--color-red-500);
+    font-size: clamp(1rem, 1vw, 1.125rem);
+    
+    margin-bottom: 1rem;
+}

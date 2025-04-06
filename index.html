@@ -8,9 +8,9 @@
     content="This website enables you to generate your own password."/>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <link rel="stylesheet" href="/starter-code/style.css">
-  <link rel="stylesheet" href="/starter-code/reset.css">
-  <script defer src="/starter-code/script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+  <script defer src="script.js"></script>
   
   <title>Password generator | la-pupeh</title>
 </head>
@@ -21,7 +21,7 @@
       <div class="password-input">
         <input type="text" id="password" placeholder="P4$5W0rD!" readonly>
         <span class="copied hidden">COPIED</span>
-        <img src="/starter-code/assets/images/icon-copy.svg" alt="Copy icon" id="copy-icon" class="copy-icon">
+        <img src="/images/icon-copy.svg" alt="Copy icon" id="copy-icon" class="copy-icon">
       </div>
       <div class="password-details-container">
         <div class="character-length">
@@ -30,22 +30,22 @@
         </div>
         <input type="range" id="slider" min="0" max="20" value="0">
         <div class="checkboxes">
-          <label for="checkbox" class="checkbox-container">
+          <label class="checkbox-container">
             <input type="checkbox" id="uppercase">
             <span class="checkmark"></span>
             <span class="uppercase">Include Uppercase Letters</span>
           </label>
-          <label for="checkbox" class="checkbox-container">
+          <label class="checkbox-container">
             <input type="checkbox" id="lowercase" >
             <span class="checkmark"></span>
             <span class="lowercase">Include Lowercase Letters</span>
           </label>
-          <label for="checkbox" class="checkbox-container">
+          <label class="checkbox-container">
             <input type="checkbox" id="numbers">
             <span class="checkmark"></span>
             <span class="numbers">Include Numbers</span>
           </label>
-          <label for="checkbox" class="checkbox-container">
+          <label class="checkbox-container">
             <input type="checkbox" id="symbols">
             <span class="checkmark"></span>
             <span class="symbols">Include Symbols</span>
@@ -63,6 +63,7 @@
         </div>
       </div>
     </div>
+    <p class="error-text"></p>
       <button id="generate-btn">
         <span>GENERATE</span>
         <svg class="arrow-icon" width="12" height="12" xmlns="http://www.w3.org/2000/svg">
