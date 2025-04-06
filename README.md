@@ -1,7 +1,6 @@
 Password generator app solution
 
 ### The challenge
-
 Users should be able to:
 
 - Generate a password based on the selected inclusion options
@@ -9,12 +8,10 @@ Users should be able to:
 - See a strength rating for their generated password
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
-
 ![](Screenshot.png)
 ### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Lapupeh/Password-generator-app.git]
+- Live Site URL: [https://heartfelt-tiramisu-bcb227.netlify.app/]
 
 ### Built with
 
