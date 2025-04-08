@@ -25,7 +25,8 @@ slider.addEventListener('input', sliderLength);
 
 
 const selectedOptions = [];
-document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+const listCheckboxes = document.querySelectorAll('input[type="checkbox"]')
+listCheckboxes.forEach(checkbox => {
     checkbox.addEventListener('change', function() {
         if (this.checked) {
             selectedOptions.push(this.id);
@@ -46,14 +47,14 @@ function generatePassword() {
     selectedOptions.forEach(option => {
         charSet += characters[option];
     });
-
-    if (!charSet) {
-        password = '';
-        errorText.innerText = 'Please select at least one character type.';   
-    }
+    
     if (charLength.textContent < 1) {
         password = '';
         errorText.innerText = 'Please select a length greater than 0.';   
+    }
+    else if (listCheckboxes[0].checked === false && listCheckboxes[1].checked === false && listCheckboxes[2].checked === false && listCheckboxes[3].checked === false) {
+        password = '';
+        errorText.innerText = 'Please select at least one character type.';   
     }
     else {
         errorText.innerText = '';

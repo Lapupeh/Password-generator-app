@@ -250,6 +250,5 @@ button:hover {
 .error-text {
     color: var(--color-red-500);
     font-size: clamp(1rem, 1vw, 1.125rem);
-    
     margin-bottom: 1rem;
 }
